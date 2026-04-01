@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — Sol Seekers Adventures LLC</title>
+  <meta name="description" content="We're a couple who travel between the US and Mexico multiple times a year, personally testing adventures so you know exactly what's worth your time."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .about-hero{background:linear-gradient(165deg,#041e28 0%,#0a4a52 50%,#0d6b77 100%);padding:5rem 2.5rem 7rem;position:relative;overflow:hidden;}
+    .about-hero-inner{position:relative;z-index:2;max-width:700px;}
+    .about-hero h1{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:700;color:#fff;line-height:1.12;margin-bottom:1rem;}
+    .about-hero h1 span{color:#f5c542;}
+    .about-hero p{font-size:1.05rem;line-height:1.8;color:#b8dde4;max-width:580px;}
+    .hc{position:absolute;border-radius:50%;background:#f5c542;opacity:.05;}
+    .hc1{width:600px;height:600px;top:-200px;right:-100px;}
+    .hc2{width:300px;height:300px;bottom:-80px;left:2%;}
+    .about-split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
+    .about-split p{font-size:1rem;line-height:1.85;color:#5a6a70;margin-bottom:1rem;}
+    .about-split p strong{color:#1a1a1a;font-weight:600;}
+    .story-img{border-radius:20px;overflow:hidden;height:460px;position:relative;}
+    .story-img img{width:100%;height:100%;object-fit:cover;}
+    .story-img .badge{position:absolute;bottom:1.1rem;left:1.1rem;background:rgba(10,74,82,.92);border:1px solid rgba(245,197,66,.42);border-radius:12px;padding:.65rem .9rem;}
+    .story-img .badge .bv{font-size:1.2rem;font-weight:700;color:#f5c542;}
+    .story-img .badge .bl{font-size:11px;color:#8dc8d0;}
+    .photo-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;}
+    .ps-item{border-radius:14px;overflow:hidden;height:200px;position:relative;}
+    .ps-item img{width:100%;height:100%;object-fit:cover;transition:transform .35s;}
+    .ps-item:hover img{transform:scale(1.05);}
+    .ps-fb{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
+    .ps-cap{position:absolute;bottom:0;left:0;right:0;padding:.6rem .85rem;background:linear-gradient(transparent,rgba(4,20,28,.85));color:#fff;font-size:11px;font-weight:600;}
+    .mission-block{background:#0a4a52;border-radius:20px;padding:3.5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+    .mission-block .section-label{color:#f5c542;}
+    .mission-block .section-title{color:#fff;}
+    .mission-block p{font-size:1rem;line-height:1.8;color:#b8dde4;margin-bottom:1rem;}
+    .mission-quote{border-left:3px solid #f5c542;padding:1.5rem;background:rgba(245,197,66,.07);border-radius:0 14px 14px 0;}
+    .mission-quote p{font-size:1.1rem;line-height:1.75;color:#e0f4f7;font-style:italic;}
+    .mission-quote cite{display:block;margin-top:1rem;font-size:13px;color:#f5c542;font-style:normal;font-weight:600;}
+    .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+    .value-card{border:0.5px solid rgba(0,0,0,.1);border-radius:16px;padding:1.75rem 1.5rem;background:#fff;}
+    .value-icon{font-size:2rem;margin-bottom:.85rem;}
+    .value-title{font-size:1rem;font-weight:700;margin-bottom:.5rem;}
+    .value-text{font-size:13px;color:#5a6a70;line-height:1.7;}
+    .hiw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+    .hiw-card{text-align:center;padding:1.5rem 1rem;}
+    .hiw-num{width:44px;height:44px;border-radius:50%;background:#0a4a52;color:#f5c542;font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;border:2px solid rgba(245,197,66,.3);}
+    .hiw-icon{font-size:1.8rem;margin-bottom:.75rem;}
+    .hiw-title{font-size:14px;font-weight:600;margin-bottom:.4rem;}
+    .hiw-text{font-size:12px;color:#5a6a70;line-height:1.6;}
+    .log-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:.85rem;}
+    .log-card{border:0.5px solid rgba(0,0,0,.1);border-radius:12px;padding:1rem;background:#fff;display:flex;align-items:center;gap:.75rem;}
+    .log-icon{font-size:1.5rem;min-width:32px;}
+    .log-name{font-size:13px;font-weight:600;}
+    .log-dest{font-size:11px;color:#5a6a70;margin-top:1px;}
+    .dest-chips{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.5rem;}
+    .dest-chip{display:flex;align-items:center;gap:6px;border:1px solid rgba(0,0,0,.12);border-radius:50px;padding:.5rem 1.1rem;font-size:13px;font-weight:500;background:#f4f6f8;cursor:pointer;text-decoration:none;color:#1a1a1a;transition:all .2s;}
+    .dest-chip:hover{border-color:#0a4a52;color:#0a4a52;background:rgba(10,74,82,.06);}
+    .promise-band{background:linear-gradient(120deg,#f5c542 0%,#e0a020 100%);padding:4rem 2.5rem;}
+    .promise-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:900px;margin:0 auto;}
+    .promise-inner h2{font-size:1.9rem;font-weight:700;color:#0a4a52;margin-bottom:.75rem;}
+    .promise-inner>div>p{color:#1a5a62;line-height:1.75;font-size:.95rem;}
+    .promise-list{list-style:none;margin-top:1rem;}
+    .promise-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:#0a4a52;margin-bottom:.5rem;}
+    .promise-list li::before{content:'✓';font-weight:700;margin-top:1px;}
+    .promise-cta{display:flex;flex-direction:column;align-items:flex-start;gap:.85rem;}
+    .promise-cta p{font-size:13px;color:#1a5a62;line-height:1.6;}
+    @media(max-width:800px){.about-split,.mission-block,.promise-inner{grid-template-columns:1fr;} .values-grid,.hiw-grid{grid-template-columns:1fr 1fr;} .photo-strip{grid-template-columns:1fr 1fr;}}
+    @media(max-width:500px){.values-grid,.hiw-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+<nav class="nav" id="site-nav"></nav>
+<div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; <span class="current">About Us</span></div>
+
+<!-- HERO -->
+<div class="about-hero">
+  <div style="position:absolute;inset:0;pointer-events:none;"><div class="hc hc1"></div><div class="hc hc2"></div></div>
+  <div class="about-hero-inner">
+    <div class="hero-badge">☀️ Our Story</div>
+    <h1>Two People.<br>One Big <span>Love for Mexico.</span></h1>
+    <p>We're not a travel agency, a booking platform, or a big corporation. We're a couple who split their time between the US and Mexico — chasing adventures, testing tours, and sharing only what truly blew us away.</p>
+  </div>
+  <div class="water-scene">
+    <svg viewBox="0 0 1800 180" preserveAspectRatio="none">
+      <path class="wave-back"  fill="rgba(13,107,119,0.4)"  d="M0,70 C200,30 400,100 600,60 C800,20 1000,90 1200,55 C1400,20 1600,80 1800,45 L1800,180 L0,180 Z"/>
+      <path class="wave-mid"   fill="rgba(10,74,82,0.62)"   d="M0,90 C250,50 500,120 750,80 C1000,40 1250,105 1500,70 C1650,52 1750,80 1800,76 L1800,180 L0,180 Z"/>
+      <path class="wave-front" fill="rgba(5,30,34,0.88)"    d="M0,115 C150,82 300,132 450,105 C600,80 750,122 900,96 C1050,72 1200,118 1350,92 C1500,68 1650,110 1800,88 L1800,180 L0,180 Z"/>
+    </svg>
+  </div>
+</div>
+
+<!-- STAT BAR -->
+<div class="facts-bar">
+  <div class="fact"><div class="fact-val">6</div><div class="fact-lbl">Mexico Destinations</div></div>
+  <div class="fact"><div class="fact-val">50+</div><div class="fact-lbl">Adventures Personally Tested</div></div>
+  <div class="fact"><div class="fact-val">US ↔ MX</div><div class="fact-lbl">Multiple Trips Per Year</div></div>
+  <div class="fact"><div class="fact-val">0</div><div class="fact-lbl">Adventures Listed We Haven't Vetted</div></div>
+  <div class="fact"><div class="fact-val">100%</div><div class="fact-lbl">Passion-Driven Curation</div></div>
+</div>
+
+<!-- OUR STORY -->
+<section>
+  <div class="about-split">
+    <div>
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">We're the Couple Who Can't Stop Going Back</h2>
+      <p>It started with one trip to Cozumel. We rented gear, jumped into the water above the Palancar Reef, and within thirty seconds of descending, we both knew — <strong>this was different</strong>. That was the trip that changed everything.</p>
+      <p>Since then, we've made the journey between the US and Mexico more times than we can count. We've drifted along Cozumel's reef wall with sea turtles keeping pace. We've watched the sunrise ignite the Tulum ruins from a beach below with nobody else around. We've sailed past El Arco in Cabo with cold drinks and warm wind.</p>
+      <p>And somewhere in all of that — between the operators who changed our lives and the ones who wasted our afternoons — <strong>Sol Seekers was born.</strong></p>
+      <p>We built this site because we kept being asked: <em>"You guys travel there so much — what should we actually do?"</em> Sol Seekers is our answer. Every adventure listed here is one we believe in, based on experiences we've had ourselves.</p>
+    </div>
+    <div class="story-img">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Mexico beach" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(145deg,#0a5a70,#1a8a6e)'"/>
+      <div class="badge"><div class="bv">Our Origin</div><div class="bl">Cozumel, Palancar Reef</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO STRIP -->
+<section class="bg-alt" style="padding-top:2.5rem;padding-bottom:2.5rem;">
+  <div style="margin-bottom:1.5rem;"><div class="section-label">Life in the Field</div><h2 class="section-title">Adventures We've Actually Done</h2></div>
+  <div class="photo-strip">
+    <div class="ps-item"><img src="https://www.cozumelsnorkel.com/wp-content/uploads/2019/06/cozumel-snorkel-tour.jpg" alt="Cozumel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="ps-fb" style="display:none;background:linear-gradient(145deg,#0a5a70,#18a8c8)">🤿</div><div class="ps-cap">Drifting Cozumel's Palancar Reef</div></div>
+    <div class="ps-item"><img src="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cabo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="ps-fb" style="display:none;background:linear-gradient(145deg,#7a4010,#d4882a)">🌵</div><div class="ps-cap">Sunset sail past El Arco, Cabo</div></div>
+    <div class="ps-item"><img src="https://www.mayan-ruins.org/wp-content/uploads/tulum-ruins.jpg" alt="Tulum" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="ps-fb" style="display:none;background:linear-gradient(145deg,#4a5a10,#98b820)">🏛️</div><div class="ps-cap">Sunrise at the Tulum ruins</div></div>
+    <div class="ps-item"><img src="https://takemetopuertovallarta.com/wp-content/uploads/2022/06/puerto-vallarta-panoramic.jpg" alt="Puerto Vallarta" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/><div class="ps-fb" style="display:none;background:linear-gradient(145deg,#1a6b3a,#38c470)">🌴</div><div class="ps-cap">Banderas Bay, Puerto Vallarta</div></div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section>
+  <div class="mission-block">
+    <div>
+      <div class="section-label">Our Mission</div>
+      <h2 class="section-title">Skip the Guesswork. Find What's Real.</h2>
+      <p>Mexico has thousands of adventures on offer. Most of them are fine. A handful are genuinely extraordinary. The problem is telling the difference before you show up.</p>
+      <p>Sol Seekers exists to close that gap. We do the legwork — we travel, we test, we talk to operators — and then we curate only the experiences worth your time and money.</p>
+      <p>We're not affiliated with resorts. We don't take kickbacks to feature low-quality tours. Every listing on this site is here because we believe it delivers.</p>
+    </div>
+    <div class="mission-quote">
+      <p>"We built Sol Seekers because we kept being asked: 'You travel there so much — what should we actually do?' This site is our honest answer. Every adventure here is one we'd do again."</p>
+      <cite>— The Sol Seekers Team</cite>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="bg-alt">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-label">How Sol Seekers Works</div>
+    <h2 class="section-title">Discovery Made Simple</h2>
+    <p class="section-sub" style="margin:0 auto;">We connect you with the best adventure operators in Mexico. No accounts. No friction. Find what excites you and go.</p>
+  </div>
+  <div class="hiw-grid">
+    <div class="hiw-card"><div class="hiw-num">1</div><div class="hiw-icon">🗺️</div><div class="hiw-title">Choose a destination</div><div class="hiw-text">Browse our six Mexico destinations — each with hand-curated adventures across every type of experience.</div></div>
+    <div class="hiw-card"><div class="hiw-num">2</div><div class="hiw-icon">🔍</div><div class="hiw-title">Find your adventure</div><div class="hiw-text">Every listing includes real details — difficulty, duration, what's included, and honest pricing.</div></div>
+    <div class="hiw-card"><div class="hiw-num">3</div><div class="hiw-icon">🔗</div><div class="hiw-title">Click to the operator</div><div class="hiw-text">Hit Book Now and you're taken directly to the operator or verified booking platform. No account needed.</div></div>
+    <div class="hiw-card"><div class="hiw-num">4</div><div class="hiw-icon">🌊</div><div class="hiw-title">Go have the adventure</div><div class="hiw-text">Show up, dive in, climb it, sail it. Your stories help make the next list better.</div></div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section>
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-label">What We Stand For</div>
+    <h2 class="section-title">The Sol Seekers Standards</h2>
+  </div>
+  <div class="values-grid">
+    <div class="value-card"><div class="value-icon">🤿</div><div class="value-title">Real experiences only</div><div class="value-text">We don't list anything we haven't personally experienced or thoroughly vetted. If we wouldn't recommend it to a close friend, it doesn't go on the site.</div></div>
+    <div class="value-card"><div class="value-icon">☀️</div><div class="value-title">Adrenaline-first curation</div><div class="value-text">Sol Seekers was built for people who want more than a beach chair. We prioritize high-energy, high-reward adventures that push your comfort zone in the best way.</div></div>
+    <div class="value-card"><div class="value-icon">🌿</div><div class="value-title">Respect for Mexico</div><div class="value-text">We love this country deeply. We only recommend operators who treat the land, reef, and local communities with the respect they deserve.</div></div>
+    <div class="value-card"><div class="value-icon">🔒</div><div class="value-title">Honest and transparent</div><div class="value-text">We earn a small commission when you book through our links — that's how we keep the lights on. But commissions never influence which adventures make the list.</div></div>
+    <div class="value-card"><div class="value-icon">🗺️</div><div class="value-title">Always exploring</div><div class="value-text">We're back in Mexico multiple times a year — always testing new operators, discovering hidden gems, and updating the site with what's genuinely worth your time.</div></div>
+    <div class="value-card"><div class="value-icon">🤝</div><div class="value-title">Community-driven</div><div class="value-text">The best recommendations come from people who've been there. We listen to traveler feedback, update listings based on real experiences, and always keep it honest.</div></div>
+  </div>
+</section>
+
+<!-- ADVENTURE LOG -->
+<section class="bg-alt">
+  <div style="margin-bottom:1.75rem;">
+    <div class="section-label">Our Personal List</div>
+    <h2 class="section-title">Adventures We've Done Ourselves</h2>
+    <p class="section-sub">A partial log of the experiences that shaped Sol Seekers — the ones we keep talking about years later.</p>
+  </div>
+  <div class="log-grid">
+    <div class="log-card"><div class="log-icon">🤿</div><div><div class="log-name">Palancar Reef Drift Dive</div><div class="log-dest">Cozumel</div></div></div>
+    <div class="log-card"><div class="log-icon">🐢</div><div><div class="log-name">Sea Turtle Snorkel</div><div class="log-dest">Cozumel</div></div></div>
+    <div class="log-card"><div class="log-icon">🌙</div><div><div class="log-name">Night Dive</div><div class="log-dest">Cozumel</div></div></div>
+    <div class="log-card"><div class="log-icon">⛵</div><div><div class="log-name">Sunset Catamaran</div><div class="log-dest">Cabo San Lucas</div></div></div>
+    <div class="log-card"><div class="log-icon">🦭</div><div><div class="log-name">Sea Lion Snorkel</div><div class="log-dest">Cabo San Lucas</div></div></div>
+    <div class="log-card"><div class="log-icon">🏜️</div><div><div class="log-name">Baja Desert ATV</div><div class="log-dest">Cabo San Lucas</div></div></div>
+    <div class="log-card"><div class="log-icon">🐋</div><div><div class="log-name">Humpback Whale Watch</div><div class="log-dest">Puerto Vallarta</div></div></div>
+    <div class="log-card"><div class="log-icon">🌿</div><div><div class="log-name">Jungle Zip-line</div><div class="log-dest">Puerto Vallarta</div></div></div>
+    <div class="log-card"><div class="log-icon">🏝️</div><div><div class="log-name">Marietas Hidden Beach</div><div class="log-dest">Puerto Vallarta</div></div></div>
+    <div class="log-card"><div class="log-icon">🎨</div><div><div class="log-name">MUSA Underwater Museum</div><div class="log-dest">Cancún</div></div></div>
+    <div class="log-card"><div class="log-icon">🏝️</div><div><div class="log-name">Isla Mujeres Day Trip</div><div class="log-dest">Cancún</div></div></div>
+    <div class="log-card"><div class="log-icon">🏊</div><div><div class="log-name">Twin Cenote Dive</div><div class="log-dest">Playa del Carmen</div></div></div>
+    <div class="log-card"><div class="log-icon">🦈</div><div><div class="log-name">Bull Shark Dive</div><div class="log-dest">Playa del Carmen</div></div></div>
+    <div class="log-card"><div class="log-icon">🏛️</div><div><div class="log-name">Ruins at Sunrise</div><div class="log-dest">Tulum</div></div></div>
+    <div class="log-card"><div class="log-icon">🌿</div><div><div class="log-name">Sian Ka'an Safari</div><div class="log-dest">Tulum</div></div></div>
+    <div class="log-card"><div class="log-icon">🚴</div><div><div class="log-name">Cobá Ruins Bike &amp; Climb</div><div class="log-dest">Tulum</div></div></div>
+  </div>
+</section>
+
+<!-- SIX DESTINATIONS -->
+<section>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+    <div>
+      <div class="section-label">Where We Go</div>
+      <h2 class="section-title">Six Destinations We Know by Heart</h2>
+      <p style="font-size:.95rem;color:#5a6a70;line-height:1.75;margin-bottom:.5rem;">We don't try to cover the whole world. We go deep on the places we actually know — returning again and again until we understand not just the highlights but the hidden gems, the seasonal secrets, and the operators worth trusting.</p>
+      <p style="font-size:.95rem;color:#5a6a70;line-height:1.75;">For now, that means Mexico — six destinations that we've come to love like a second home.</p>
+      <div class="dest-chips">
+        <a href="cozumel.html" class="dest-chip">🤿 Cozumel</a>
+        <a href="cabo.html" class="dest-chip">🌵 Cabo San Lucas</a>
+        <a href="puerto-vallarta.html" class="dest-chip">🐋 Puerto Vallarta</a>
+        <a href="cancun.html" class="dest-chip">🏖️ Cancún</a>
+        <a href="playa-del-carmen.html" class="dest-chip">🐠 Playa del Carmen</a>
+        <a href="tulum.html" class="dest-chip">🏛️ Tulum</a>
+      </div>
+    </div>
+    <div style="border:0.5px solid rgba(0,0,0,.1);border-radius:18px;padding:2rem;background:#f4f6f8;">
+      <div style="font-size:1rem;font-weight:600;margin-bottom:1.25rem;">What makes us different</div>
+      <div style="display:flex;flex-direction:column;gap:.9rem;">
+        <div style="display:flex;gap:.85rem;align-items:flex-start;"><div style="min-width:36px;height:36px;border-radius:9px;background:#e6f4f6;display:flex;align-items:center;justify-content:center;font-size:1rem;">✈️</div><div><div style="font-size:13px;font-weight:600;margin-bottom:2px;">We actually go there — repeatedly</div><div style="font-size:12px;color:#5a6a70;">Multiple trips per year, not one-time visit content.</div></div></div>
+        <div style="display:flex;gap:.85rem;align-items:flex-start;"><div style="min-width:36px;height:36px;border-radius:9px;background:#e6f4f6;display:flex;align-items:center;justify-content:center;font-size:1rem;">🤿</div><div><div style="font-size:13px;font-weight:600;margin-bottom:2px;">We personally test what we recommend</div><div style="font-size:12px;color:#5a6a70;">If it's on our site, one of us has done it.</div></div></div>
+        <div style="display:flex;gap:.85rem;align-items:flex-start;"><div style="min-width:36px;height:36px;border-radius:9px;background:#e6f4f6;display:flex;align-items:center;justify-content:center;font-size:1rem;">🚫</div><div><div style="font-size:13px;font-weight:600;margin-bottom:2px;">We say no to bad operators</div><div style="font-size:12px;color:#5a6a70;">Even if the commission is good, we don't list mediocre experiences.</div></div></div>
+        <div style="display:flex;gap:.85rem;align-items:flex-start;"><div style="min-width:36px;height:36px;border-radius:9px;background:#e6f4f6;display:flex;align-items:center;justify-content:center;font-size:1rem;">💬</div><div><div style="font-size:13px;font-weight:600;margin-bottom:2px;">We're always reachable</div><div style="font-size:12px;color:#5a6a70;">Have a question or want a personal recommendation? Just ask.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<div class="promise-band">
+  <div class="promise-inner">
+    <div>
+      <h2>Our Promise to You</h2>
+      <p>Sol Seekers will always be built on the same principle we started with: only show people what's actually worth their time.</p>
+      <ul class="promise-list">
+        <li>Every adventure listed is one we trust</li>
+        <li>Booking links always go to verified operators</li>
+        <li>No hidden upsells or misleading descriptions</li>
+        <li>We update constantly based on real experiences</li>
+        <li>If something stops being good, we remove it</li>
+        <li>We'll always be transparent about how we earn</li>
+      </ul>
+    </div>
+    <div class="promise-cta">
+      <div style="font-size:1rem;font-weight:600;color:#0a4a52;margin-bottom:.5rem;">Ready to find your adventure?</div>
+      <p>Browse our six Mexico destinations and find something that genuinely excites you. We'll take care of pointing you in the right direction.</p>
+      <a href="index.html#destinations" class="btn-dark">Explore Adventures</a>
+      <a href="mailto:hello@solseekersadventures.com" class="btn-ghost">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="shared.js"></script>
+<script>SS.buildNav('about'); SS.buildFooter('about');</script>
+</body>
+</html>
