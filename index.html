@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sol Seekers Adventures — Mexico's Best Adventure Tours</title>
+  <meta name="description" content="Hand-curated adventure tours across Cozumel, Cabo San Lucas, Puerto Vallarta, Cancún, Playa del Carmen & Tulum. Personally tested by a couple who travel Mexico year-round."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .home-hero{position:relative;min-height:92vh;background:linear-gradient(165deg,#041e28 0%,#0a4a52 45%,#0d6b77 80%,#0e8a7a 100%);display:flex;align-items:center;overflow:hidden;padding:4rem 2.5rem 8rem;}
+    .hc{position:absolute;border-radius:50%;background:#f5c542;opacity:.05;}
+    .hc1{width:700px;height:700px;top:-250px;right:-150px;}
+    .hc2{width:350px;height:350px;bottom:60px;left:3%;}
+    .hc3{width:200px;height:200px;top:28%;left:38%;}
+    .hero-inner{position:relative;z-index:2;max-width:660px;}
+    .hero-inner h1{font-size:clamp(2.6rem,5.5vw,4rem);font-weight:700;color:#fff;line-height:1.12;margin-bottom:1.1rem;}
+    .hero-inner h1 span{color:#f5c542;}
+    .hero-inner>p{font-size:1.05rem;line-height:1.75;color:#b8dde4;margin-bottom:2rem;max-width:540px;}
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;}
+    .why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.5rem;}
+    .why-num{font-size:2.4rem;font-weight:700;color:#f5c542;line-height:1;margin-bottom:.5rem;}
+    .why-title{font-size:1rem;font-weight:600;color:#fff;margin-bottom:.4rem;}
+    .why-desc{font-size:13px;color:#8dc8d0;line-height:1.6;}
+    .section-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.75rem;}
+    .d-cozumel{background:linear-gradient(145deg,#0a5a70,#18a8c8);}
+    .d-cabo{background:linear-gradient(145deg,#7a4010,#d4882a);}
+    .d-vallarta{background:linear-gradient(145deg,#1a6b3a,#38c470);}
+    .d-cancun{background:linear-gradient(145deg,#0a4a7a,#1e90d8);}
+    .d-playa{background:linear-gradient(145deg,#5a1a6b,#aa3acc);}
+    .d-tulum{background:linear-gradient(145deg,#4a5a10,#98b820);}
+  </style>
+</head>
+<body>
+<nav class="nav" id="site-nav"></nav>
+
+<div class="home-hero">
+  <div style="position:absolute;inset:0;pointer-events:none;">
+    <div class="hc hc1"></div><div class="hc hc2"></div><div class="hc hc3"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f5c542"/></svg>
+      Mexico's Most Breathtaking Adventures — Personally Tested
+    </div>
+    <h1>Chase the Sun<br>Across <span>Beautiful Mexico</span></h1>
+    <p>Sol Seekers Adventures curates unforgettable outdoor experiences along Mexico's most stunning coastlines, reefs, and jungles. We travel there multiple times a year and only share what truly blew us away.</p>
+    <div class="hero-btns">
+      <a href="#destinations" class="btn-primary">Explore Destinations</a>
+      <a href="about.html" class="btn-outline">Our Story</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-val">6</div><div class="stat-lbl">Mexico Destinations</div></div>
+      <div><div class="stat-val">50+</div><div class="stat-lbl">Adventures Personally Tested</div></div>
+      <div><div class="stat-val">100%</div><div class="stat-lbl">Curated by Us</div></div>
+    </div>
+  </div>
+  <div class="water-scene">
+    <svg viewBox="0 0 1800 180" preserveAspectRatio="none">
+      <path class="wave-back"  fill="rgba(13,107,119,0.45)" d="M0,70 C200,30 400,100 600,60 C800,20 1000,90 1200,55 C1400,20 1600,80 1800,45 L1800,180 L0,180 Z"/>
+      <path class="wave-mid"   fill="rgba(10,74,82,0.65)"   d="M0,90 C250,50 500,120 750,80 C1000,40 1250,105 1500,70 C1650,52 1750,80 1800,76 L1800,180 L0,180 Z"/>
+      <path class="wave-front" fill="rgba(5,30,34,0.88)"    d="M0,115 C150,82 300,132 450,105 C600,80 750,122 900,96 C1050,72 1200,118 1350,92 C1500,68 1650,110 1800,88 L1800,180 L0,180 Z"/>
+      <path class="wave-foam"  fill="rgba(224,244,247,0.3)" d="M0,122 C120,114 240,126 360,118 C480,110 600,123 720,115 C840,107 960,121 1080,113 C1200,105 1320,119 1440,111 C1560,103 1680,117 1800,109 L1800,132 C1680,140 1560,126 1440,134 C1320,142 1200,128 1080,136 C960,144 840,130 720,138 C600,146 480,132 360,140 C240,148 120,134 0,142 Z"/>
+    </svg>
+  </div>
+</div>
+
+<div class="dest-strip">
+  <span class="dest-strip-label">📍 Our Destinations:</span>
+  <a href="cozumel.html" class="dest-pill">🤿 Cozumel</a>
+  <a href="cabo.html" class="dest-pill">🌵 Cabo San Lucas</a>
+  <a href="puerto-vallarta.html" class="dest-pill">🌴 Puerto Vallarta</a>
+  <a href="cancun.html" class="dest-pill">🏖️ Cancún</a>
+  <a href="playa-del-carmen.html" class="dest-pill">🐠 Playa del Carmen</a>
+  <a href="tulum.html" class="dest-pill">🏛️ Tulum</a>
+</div>
+
+<div class="search-wrap" style="padding-bottom:3rem;">
+  <div class="search-bar">
+    <div class="sb-field"><label>Destination</label>
+      <select onchange="if(this.value)window.location=this.value">
+        <option value="">All Mexico Destinations</option>
+        <option value="cozumel.html">Cozumel</option>
+        <option value="cabo.html">Cabo San Lucas</option>
+        <option value="puerto-vallarta.html">Puerto Vallarta</option>
+        <option value="cancun.html">Cancún</option>
+        <option value="playa-del-carmen.html">Playa del Carmen</option>
+        <option value="tulum.html">Tulum</option>
+      </select>
+    </div>
+    <div class="sb-field"><label>Experience Type</label>
+      <select><option>All Types</option><option>Snorkeling &amp; Diving</option><option>Jungle &amp; Cenote</option><option>Sailing &amp; Boating</option><option>Ruins &amp; Culture</option><option>Whale Watching</option></select>
+    </div>
+    <div class="sb-field"><label>Duration</label>
+      <select><option>Any Length</option><option>Half Day</option><option>Full Day</option><option>2–3 Days</option></select>
+    </div>
+    <div class="sb-field"><label>Group Size</label><input type="number" placeholder="2" min="1" max="20"/></div>
+    <button class="sb-btn">Search</button>
+  </div>
+</div>
+
+<section id="destinations" class="bg-alt">
+  <div class="section-header">
+    <div>
+      <div class="section-label">Six Incredible Destinations</div>
+      <h2 class="section-title">Explore Mexico With Sol Seekers</h2>
+      <p class="section-sub">Every destination handpicked for natural beauty, adventure potential, and unforgettable experiences — by a couple who's been to all of them, repeatedly.</p>
+    </div>
+  </div>
+  <div class="dest-grid">
+    <a href="cozumel.html" class="dest-card">
+      <img src="https://www.cozumeldiveshops.com/wp-content/uploads/2019/10/Cozumel-Coral-Reef-diving.jpg" alt="Cozumel reef" onerror="this.classList.add('d-cozumel');this.style.height='100%'"/>
+      <div class="dest-overlay"></div>
+      <div class="dest-info"><div class="dest-name">Cozumel</div><div class="dest-region">Quintana Roo, Mexico</div><span class="dest-tag">Diving &amp; Snorkeling</span></div>
+      <div class="dest-icon">🤿</div>
+    </a>
+    <a href="cabo.html" class="dest-card">
+      <img src="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cabo San Lucas" onerror="this.classList.add('d-cabo');this.style.height='100%'"/>
+      <div class="dest-overlay"></div>
+      <div class="dest-info"><div class="dest-name">Cabo San Lucas</div><div class="dest-region">Baja California Sur, Mexico</div><span class="dest-tag">Sailing &amp; Wildlife</span></div>
+      <div class="dest-icon">🌵</div>
+    </a>
+    <a href="puerto-vallarta.html" class="dest-card">
+      <img src="https://takemetopuertovallarta.com/wp-content/uploads/2022/06/puerto-vallarta-panoramic.jpg" alt="Puerto Vallarta" onerror="this.classList.add('d-vallarta');this.style.height='100%'"/>
+      <div class="dest-overlay"></div>
+      <div class="dest-info"><div class="dest-name">Puerto Vallarta</div><div class="dest-region">Jalisco, Mexico</div><span class="dest-tag">Whale Watching &amp; Jungle</span></div>
+      <div class="dest-icon">🐋</div>
+    </a>
+    <a href="cancun.html" class="dest-card">
+      <img src="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cancun" onerror="this.classList.add('d-cancun');this.style.height='100%'"/>
+      <div class="dest-overlay"></div>
+      <div class="dest-info"><div class="dest-name">Cancún</div><div class="dest-region">Quintana Roo, Mexico</div><span class="dest-tag">Reefs &amp; Island Tours</span></div>
+      <div class="dest-icon">🏖️</div>
+    </a>
+    <a href="playa-del-carmen.html" class="dest-card">
+      <img src="https://www.dreamstime.com/royalty-free-stock-photo-playa-del-carmen-beach-palm-trees-mexico-image34443925.jpg" alt="Playa del Carmen" onerror="this.classList.add('d-playa');this.style.height='100%'"/>
+      <div class="dest-overlay"></div>
+      <div class="dest-info"><div class="dest-name">Playa del Carmen</div><div class="dest-region">Quintana Roo, Mexico</div><span class="dest-tag">Cenotes &amp; Reefs</span></div>
+      <div class="dest-icon">🐠</div>
+    </a>
+    <a href="tulum.html" class="dest-card">
+      <img src="https://www.mayan-ruins.org/wp-content/uploads/tulum-ruins.jpg" alt="Tulum" onerror="this.classList.add('d-tulum');this.style.height='100%'"/>
+      <div class="dest-overlay"></div>
+      <div class="dest-info"><div class="dest-name">Tulum</div><div class="dest-region">Quintana Roo, Mexico</div><span class="dest-tag">Ruins &amp; Jungle</span></div>
+      <div class="dest-icon">🏛️</div>
+    </a>
+  </div>
+</section>
+
+<section>
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Mexico Adventures Built for You</h2>
+    <p class="section-sub" style="margin:0 auto;">From underwater worlds to ancient ruins, every Sol Seekers experience is guided, safe, and unforgettable.</p>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card"><div class="exp-icon">🤿</div><div class="exp-title">Diving &amp; Snorkeling</div><div class="exp-desc">Explore the Mesoamerican Reef — the world's second largest — from Cozumel to Cancún.</div><div class="exp-count">16 tours available</div></div>
+    <div class="exp-card"><div class="exp-icon">🏊</div><div class="exp-title">Cenote Expeditions</div><div class="exp-desc">Swim and dive in the Yucatán's stunning underground cenotes near Playa del Carmen and Tulum.</div><div class="exp-count">10 tours available</div></div>
+    <div class="exp-card"><div class="exp-icon">⛵</div><div class="exp-title">Sailing &amp; Boating</div><div class="exp-desc">Catamaran sunset sails, speedboat island hops, and private yacht charters across Cabo and Vallarta.</div><div class="exp-count">12 tours available</div></div>
+    <div class="exp-card"><div class="exp-icon">🏛️</div><div class="exp-title">Ruins &amp; Culture</div><div class="exp-desc">Walk ancient Mayan sites at Tulum and Cobá with expert guides who bring history to life.</div><div class="exp-count">8 tours available</div></div>
+    <div class="exp-card"><div class="exp-icon">🐋</div><div class="exp-title">Wildlife Encounters</div><div class="exp-desc">Whale watching in Vallarta, sea turtle releases in Cancún, and manta ray swims in Cabo.</div><div class="exp-count">9 tours available</div></div>
+  </div>
+</section>
+
+<section class="bg-teal">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-label">Why Sol Seekers</div>
+    <h2 class="section-title">Your Mexico Adventure, Done Right</h2>
+    <p class="section-sub" style="margin:0 auto;color:#8dc8d0;">We're not a big agency. We're a couple who travels Mexico multiple times a year and only recommends what truly blew us away.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card"><div class="why-num">50+</div><div class="why-title">Adventures Personally Tested</div><div class="why-desc">Every tour on this site has been experienced by us. If we wouldn't do it again, it's not listed.</div></div>
+    <div class="why-card"><div class="why-num">6</div><div class="why-title">Destinations We Know by Heart</div><div class="why-desc">We return to each destination multiple times a year — always testing new operators and updating the site.</div></div>
+    <div class="why-card"><div class="why-num">0</div><div class="why-title">Tours Listed We Don't Trust</div><div class="why-desc">Commissions never influence our recommendations. We say no to mediocre operators even when the money is good.</div></div>
+    <div class="why-card"><div class="why-num">Real</div><div class="why-title">People Behind the Site</div><div class="why-desc">You're not dealing with a faceless platform. <a href="about.html" style="color:#f5c542;">Read our story</a> and reach out any time with questions.</div></div>
+  </div>
+</section>
+
+<section class="bg-alt">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-label">Adventurer Stories</div>
+    <h2 class="section-title">What Our Guests Say</h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card"><div class="stars">★★★★★</div><p class="test-text">"The Cozumel dive was world-class. Our guide knew every reef like the back of his hand. I've dived in 12 countries and this is still my favorite."</p><div class="test-author"><div class="avatar" style="background:#e6f4f6;color:#0a4a52;">JM</div><div><div class="author-name">Jamie M.</div><div class="author-loc">Dallas, TX</div></div></div></div>
+    <div class="test-card"><div class="stars">★★★★★</div><p class="test-text">"Tulum ruins at sunrise with nobody else around, then swimming in a secret cenote — Sol Seekers made it feel like we had all of Mexico to ourselves."</p><div class="test-author"><div class="avatar" style="background:#faeeda;color:#854f0b;">SR</div><div><div class="author-name">Sara R.</div><div class="author-loc">Chicago, IL</div></div></div></div>
+    <div class="test-card"><div class="stars">★★★★★</div><p class="test-text">"The Cabo sunset sail was the highlight of our honeymoon. Open bar, incredible food, El Arco glowing at dusk — we're already planning our next Sol Seekers trip."</p><div class="test-author"><div class="avatar" style="background:#eeedfe;color:#3c3489;">TK</div><div><div class="author-name">Tyler &amp; Kim K.</div><div class="author-loc">Nashville, TN</div></div></div></div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Ready to Chase the Mexican Sun?</h2>
+  <p>From Caribbean reefs to Pacific sunsets — your next great adventure is waiting in Mexico.</p>
+  <a href="cozumel.html" class="btn-dark">Start Exploring</a>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="shared.js"></script>
+<script>SS.buildNav('home'); SS.buildFooter('');</script>
+</body>
+</html>
